@@ -1,4 +1,4 @@
-public class Vehicle implements VehicleChecks {
+public class Vehicle {
     public String modelName;
     public int wheelsCount;
 
@@ -19,12 +19,5 @@ public class Vehicle implements VehicleChecks {
     }
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
-    }
-
-    @Override
-    public void updateTyres() {
-        for (int i = 0; i < this.wheelsCount; i++) {
-            System.out.println("Меняем покрышку №" + (i+1));
-        }
     }
 }

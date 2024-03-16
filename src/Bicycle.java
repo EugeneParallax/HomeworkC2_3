@@ -1,11 +1,13 @@
-public class Bicycle extends Vehicle implements VehicleChecks {
+public class Bicycle extends Vehicle implements VehicleActions {
 
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
     @Override
-    public void updateTyres() {
-        System.out.println("Меняем покрышку велосипеда №");
+    public void service() {
+        System.out.println("== Обслуживаем велосипед " + this.modelName);
+        ServiceStation.updateTyres(this);
+
     }
 }

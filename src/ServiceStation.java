@@ -1,19 +1,15 @@
 public class ServiceStation {
-    public void check(Car car) {
-        System.out.println("Обслуживаем автомобиль " + car.getModelName());
-        car.updateTyres();
-        car.checkEngine();
+
+    public static void updateTyres(Vehicle vehicle) {
+        for (int i = 0; i < vehicle.wheelsCount; i++) {
+            System.out.println("Меняем покрышку №" + (i+1));
+        }
     }
 
-    public void check(Bicycle bicycle) {
-        System.out.println("Обслуживаем велосипед " + bicycle.getModelName());
-        bicycle.updateTyres();
+    public static void checkEngine(Vehicle vehicle) {
+            System.out.println("Проверяем двигатель");
     }
-
-    public void check(Truck truck) {
-        System.out.println("Обслуживаем грузовик " + truck.getModelName());
-        truck.updateTyres();
-        truck.checkEngine();
-        truck.checkTrailer();
+    public static void checkTrailer(Vehicle vehicle) {
+        System.out.println("Проверяем прицеп");
     }
 };
